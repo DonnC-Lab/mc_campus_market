@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:material_floating_search_bar/material_floating_search_bar.dart';
-import 'package:mc_core_constants/mc_core_constants.dart';
+import 'package:mini_campus_core/mini_campus_core.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_tile.dart';
 
@@ -63,7 +63,7 @@ class _SearchViewState extends ConsumerState<SearchView> {
   Widget build(BuildContext context) {
     final _style = Theme.of(context).textTheme.subtitle2?.copyWith(
           fontSize: 12,
-          color: greyTextShade,
+          color: McAppColors.appGreyShadeColor,
           fontWeight: FontWeight.w400,
           fontStyle: FontStyle.italic,
         );
@@ -98,7 +98,7 @@ class _SearchViewState extends ConsumerState<SearchView> {
                 actions: [
                   FloatingSearchBarAction.icon(
                     icon: const Icon(Ionicons.close_outline,
-                        color: greyTextShade),
+                        color: McAppColors.appGreyShadeColor),
                     showIfOpened: true,
                     onTap: () {
                       searchBarController.clear();
@@ -107,7 +107,7 @@ class _SearchViewState extends ConsumerState<SearchView> {
                   ),
                   // FloatingSearchBarAction.icon(
                   //   icon: const Icon(Ionicons.funnel_outline,
-                  //       color: greyTextShade),
+                  //       color: McAppColors.appGreyShadeColor),
                   //   showIfOpened: true,
                   //   onTap: () {},
                   // ),

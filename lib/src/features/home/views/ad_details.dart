@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:linkable/linkable.dart';
-import 'package:mc_core_constants/mc_core_constants.dart';
 import 'package:mini_campus_core/mini_campus_core.dart';
-import 'package:mini_campus_core_components/mini_campus_core_components.dart';
 import 'package:relative_scale/relative_scale.dart';
 
 import '../../../models/ad_service.dart';
@@ -38,7 +36,7 @@ class AdDetailsView extends ConsumerWidget {
                             children: [
                               ElevatedButton.icon(
                                 style: ElevatedButton.styleFrom(
-                                  primary: bluishColor,
+                                  primary: McAppColors.appMainColor,
                                   elevation: 8,
                                   // fixedSize: Size(width, sy(30)),
                                 ),
@@ -71,7 +69,7 @@ class AdDetailsView extends ConsumerWidget {
                                                   _dialog.showToast('Ad liked');
                                                 },
                                           iconSize: 30,
-                                          color: bluishColor,
+                                          color: McAppColors.appMainColor,
                                           icon: status.snapshot.exists
                                               ? const Icon(Ionicons.heart)
                                               : const Icon(
@@ -93,7 +91,7 @@ class AdDetailsView extends ConsumerWidget {
                                         .bodyText1
                                         ?.copyWith(
                                           fontWeight: FontWeight.w500,
-                                          color: greyTextShade,
+                                          color: McAppColors.appGreyShadeColor,
                                           fontSize: 12,
                                         ),
                                     children: <TextSpan>[
@@ -172,7 +170,7 @@ class AdDetailsView extends ConsumerWidget {
                                       children: [
                                         const Icon(
                                           Entypo.location,
-                                          color: greyTextShade,
+                                          color: McAppColors.appGreyShadeColor,
                                           size: 20,
                                         ),
                                         const SizedBox(width: 8),
@@ -185,7 +183,8 @@ class AdDetailsView extends ConsumerWidget {
                                               .subtitle2
                                               ?.copyWith(
                                                 fontSize: 13,
-                                                color: greyTextShade,
+                                                color: McAppColors
+                                                    .appGreyShadeColor,
                                               ),
                                         ),
                                       ],
@@ -194,13 +193,14 @@ class AdDetailsView extends ConsumerWidget {
                                     Linkable(
                                       text: ad.description,
                                       linkColor: Colors.blueAccent,
-                                      textColor: greyTextShade,
+                                      textColor: McAppColors.appGreyShadeColor,
                                       style: Theme.of(context)
                                           .textTheme
                                           .subtitle2
                                           ?.copyWith(
                                               fontSize: 13,
-                                              color: greyTextShade),
+                                              color: McAppColors
+                                                  .appGreyShadeColor),
                                     ),
                                     const SizedBox(height: 20),
                                     const Divider(),

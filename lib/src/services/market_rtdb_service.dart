@@ -1,7 +1,6 @@
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mini_campus_core/mini_campus_core.dart';
-import 'package:mini_campus_core_libs/mini_campus_core_libs.dart';
 
 import '../constants/fb_paths.dart';
 import '../models/ad_service.dart';

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mc_core_constants/mc_core_constants.dart';
+import 'package:mini_campus_core/mini_campus_core.dart';
+
 import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
 
 import '../constants/market_enums.dart';
@@ -41,7 +42,7 @@ class CustomHomeCard extends StatelessWidget {
                   ? Banner(
                       location: BannerLocation.topEnd,
                       message: 'request',
-                      color: bluishColorShade,
+                      color: McAppColors.appMainShadeColor,
                       child: CustomInnerCard(
                           ad: ad, chipRadius: chipRadius, isEven: isEven),
                     )
@@ -49,7 +50,7 @@ class CustomHomeCard extends StatelessWidget {
                       ? Banner(
                           location: BannerLocation.topEnd,
                           message: 'negotiable',
-                          color: bluishColorShade,
+                          color: McAppColors.appMainShadeColor,
                           child: CustomInnerCard(
                               ad: ad, chipRadius: chipRadius, isEven: isEven),
                         )

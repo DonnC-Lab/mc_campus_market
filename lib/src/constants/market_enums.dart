@@ -6,6 +6,7 @@ enum MarketCategory {
   Clothing,
   Grocery,
   Electronics,
+  Accessory,
   Beverages,
   Stationery,
   PrintingDesign,

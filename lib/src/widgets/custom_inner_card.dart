@@ -2,7 +2,6 @@ import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:mc_campus_market/src/models/ad_service.dart';
-import 'package:mc_core_constants/mc_core_constants.dart';
 import 'package:mini_campus_core/mini_campus_core.dart';
 
 class CustomInnerCard extends StatelessWidget {
@@ -62,7 +61,7 @@ class CustomInnerCard extends StatelessWidget {
             children: [
               Icon(
                 Ionicons.time_outline,
-                color: bluishColorShade,
+                color: McAppColors.appMainShadeColor,
                 size: 13,
               ),
               const SizedBox(width: 5),

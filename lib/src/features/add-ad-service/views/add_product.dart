@@ -4,7 +4,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
 import 'package:mini_campus_core/mini_campus_core.dart';
-import 'package:mini_campus_core_components/mini_campus_core_components.dart';
 import 'package:relative_scale/relative_scale.dart';
 
 import '../../../constants/fb_paths.dart';

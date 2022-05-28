@@ -17,6 +17,9 @@ extension StringToMarketCategory on String {
       case 'grocery':
         return MarketCategory.Grocery;
 
+      case 'accessory':
+        return MarketCategory.Accessory;
+
       case 'electronics':
         return MarketCategory.Electronics;
 

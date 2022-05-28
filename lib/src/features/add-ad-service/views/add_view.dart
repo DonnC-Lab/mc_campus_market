@@ -1,8 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:mc_core_constants/mc_core_constants.dart';
-import 'package:mini_campus_core_components/mini_campus_core_components.dart';
+import 'package:mini_campus_core/mini_campus_core.dart';
 import 'package:relative_scale/relative_scale.dart';
 
 import '../../../constants/market_enums.dart';
@@ -37,8 +36,9 @@ class _AddViewState extends State<AddView> {
                   Expanded(
                     child: ElevatedButton.icon(
                       style: ElevatedButton.styleFrom(
-                        primary:
-                            _adType == AdType.Ad ? bluishColor : Colors.grey,
+                        primary: _adType == AdType.Ad
+                            ? McAppColors.appMainColor
+                            : Colors.grey,
                         elevation: 8,
                         fixedSize: Size(width, sy(30)),
                       ),
@@ -56,7 +56,7 @@ class _AddViewState extends State<AddView> {
                     child: ElevatedButton.icon(
                       style: ElevatedButton.styleFrom(
                         primary: _adType == AdType.Service
-                            ? bluishColor
+                            ? McAppColors.appMainColor
                             : Colors.grey,
                         elevation: 8,
                         fixedSize: Size(width, sy(30)),

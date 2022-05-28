@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_avatar/flutter_advanced_avatar.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:mc_core_constants/mc_core_constants.dart';
 import 'package:mini_campus_core/mini_campus_core.dart';
 
 import '../../../widgets/market_stats.dart';
@@ -29,7 +28,7 @@ class MarketProfileView extends ConsumerWidget {
               child: AdvancedAvatar(
                 size: 120,
                 decoration: BoxDecoration(
-                  color: bluishColor,
+                  color: McAppColors.appMainColor,
                   borderRadius: BorderRadius.circular(60),
                 ),
                 name: student?.name,
@@ -55,7 +54,7 @@ class MarketProfileView extends ConsumerWidget {
                 style: Theme.of(context)
                     .textTheme
                     .subtitle2
-                    ?.copyWith(color: greyTextShade),
+                    ?.copyWith(color: McAppColors.appGreyShadeColor),
               ),
             ),
             const SizedBox(height: 30),
@@ -76,10 +75,8 @@ class MarketProfileView extends ConsumerWidget {
                         student.about.isEmpty
                             ? 'Hey 👋 I\'m using MiniCampus'
                             : student.about,
-                        style: Theme.of(context)
-                            .textTheme
-                            .subtitle2
-                            ?.copyWith(fontSize: 13, color: greyTextShade),
+                        style: Theme.of(context).textTheme.subtitle2?.copyWith(
+                            fontSize: 13, color: McAppColors.appGreyShadeColor),
                       ),
                     ],
                   ),

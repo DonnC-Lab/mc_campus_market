@@ -9,6 +9,7 @@ final List<MarketCategory> marketCategories = [
   MarketCategory.Clothing,
   MarketCategory.Grocery,
   MarketCategory.Electronics,
+  MarketCategory.Accessory,
   MarketCategory.Beverages,
   MarketCategory.Stationery,
   MarketCategory.PrintingDesign,
@@ -21,6 +22,7 @@ final List<MarketCategory> marketCategories = [
 final List<MarketCategory> selectableMarketCategories = [
   MarketCategory.Clothing,
   MarketCategory.Grocery,
+  MarketCategory.Accessory,
   MarketCategory.Electronics,
   MarketCategory.Beverages,
   MarketCategory.Stationery,

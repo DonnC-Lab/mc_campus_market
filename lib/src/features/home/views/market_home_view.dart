@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mc_core_constants/mc_core_constants.dart';
+import 'package:mini_campus_core/mini_campus_core.dart';
 
 import '../../../constants/general_consts.dart';
 import 'tab_content_view.dart';
@@ -20,9 +20,9 @@ class MarketHomeView extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: TabBar(
                 isScrollable: true,
-                indicatorColor: bluishColor,
+                indicatorColor: McAppColors.appMainColor,
                 indicatorWeight: 3,
-                labelColor: bluishColor,
+                labelColor: McAppColors.appMainColor,
                 unselectedLabelColor: Colors.grey,
                 tabs: marketCategories.map((e) => Tab(text: e.name)).toList(),
               ),

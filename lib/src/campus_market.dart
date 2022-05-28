@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:mc_core_constants/mc_core_constants.dart';
+import 'package:mini_campus_core/mini_campus_core.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
 
 import 'features/add-ad-service/views/add_view.dart';
@@ -22,8 +22,8 @@ class CampusMarket extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _activePrimaryColor = bluishColorShade;
-    const _activeSecondaryColor = bluishColor;
+    final _activePrimaryColor = McAppColors.appMainShadeColor;
+    const _activeSecondaryColor = McAppColors.appMainColor;
     const _inactiveColorPrimary = Colors.grey;
 
     return PersistentTabView(
@@ -47,7 +47,7 @@ class CampusMarket extends StatelessWidget {
         PersistentBottomNavBarItem(
           icon: const Icon(Ionicons.add),
           title: 'Add',
-          activeColorPrimary: bluishColor,
+          activeColorPrimary: McAppColors.appMainColor,
           activeColorSecondary: Colors.white,
           inactiveColorPrimary: _inactiveColorPrimary,
           onPressed: (context_) {

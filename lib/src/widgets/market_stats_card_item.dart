@@ -1,7 +1,7 @@
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterfire_ui/database.dart';
-import 'package:mc_core_constants/mc_core_constants.dart';
+import 'package:mini_campus_core/mini_campus_core.dart';
 
 import '../constants/market_enums.dart';
 import '../models/ad_service.dart';
@@ -38,14 +38,12 @@ class MarketStatsCardItem extends StatelessWidget {
                 children: [
                   Text(
                     title,
-                    style: Theme.of(context)
-                        .textTheme
-                        .subtitle2
-                        ?.copyWith(fontSize: 13, color: greyTextShade),
+                    style: Theme.of(context).textTheme.subtitle2?.copyWith(
+                        fontSize: 13, color: McAppColors.appGreyShadeColor),
                   ),
                   Icon(
                     icon,
-                    color: bluishColor,
+                    color: McAppColors.appMainColor,
                   ),
                   FirebaseDatabaseQueryBuilder(
                     query: query,
