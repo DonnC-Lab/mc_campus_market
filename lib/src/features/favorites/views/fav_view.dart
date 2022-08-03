@@ -37,11 +37,11 @@ class FavView extends ConsumerWidget {
         pageSize: 20,
         builder: (context, snapshot, _) {
           if (snapshot.isFetching) {
-            return const Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator.adaptive());
           }
 
           if (snapshot.isFetchingMore) {
-            return const Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator.adaptive());
           }
 
           if (snapshot.hasError) {
@@ -87,8 +87,8 @@ class FavView extends ConsumerWidget {
                                 return const SizedBox.shrink();
                               },
                               loading: () => const Center(
-                                  child:
-                                      CircularProgressIndicator()), // todo use shimmer loader
+                                  child: CircularProgressIndicator
+                                      .adaptive()), // todo use shimmer loader
                             );
                       }
 

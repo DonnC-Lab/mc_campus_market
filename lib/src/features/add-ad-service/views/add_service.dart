@@ -3,10 +3,9 @@ import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
+import 'package:mc_campus_market/src/models/ad_service.dart';
 import 'package:mini_campus_core/mini_campus_core.dart';
 import 'package:relative_scale/relative_scale.dart';
-
-import 'package:mc_campus_market/src/models/ad_service.dart';
 
 import '../../../constants/fb_paths.dart';
 import '../../../constants/market_enums.dart';
@@ -99,13 +98,14 @@ class _AddServiceState extends ConsumerState<AddService> {
 
                       if (adImg != null) {
                         // upload img to cloud
-                        final String? img = await storageApi.uploadMediaFile(
-                          image: adImg.path,
+                        final uploadedImgs =
+                            await storageApi.uploadMultipleMediaFile(
+                          images: [adImg.path],
                           path: FirebasePaths.adStorageUserFolder(appUser!.uid),
                         );
 
-                        if (img != null) {
-                          imgs.add(img);
+                        if (uploadedImgs.isNotEmpty) {
+                          imgs.addAll(uploadedImgs);
 
                           _dialog.showToast('Service image uploaded');
                         } else {

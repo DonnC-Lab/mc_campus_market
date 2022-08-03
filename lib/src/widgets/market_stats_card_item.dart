@@ -52,7 +52,8 @@ class MarketStatsCardItem extends StatelessWidget {
                       String _items = '0';
 
                       if (snapshot.isFetching) {
-                        return const Center(child: CircularProgressIndicator());
+                        return const Center(
+                            child: CircularProgressIndicator.adaptive());
                       }
 
                       if (snapshot.hasError) {

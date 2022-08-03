@@ -119,13 +119,14 @@ class _AddProductState extends ConsumerState<AddProduct> {
 
                       if (adImg != null) {
                         // upload img to cloud
-                        final String? img = await storageApi.uploadMediaFile(
-                          image: adImg.path,
+                        final uploadedImgs =
+                            await storageApi.uploadMultipleMediaFile(
+                          images: [adImg.path],
                           path: FirebasePaths.adStorageUserFolder(appUser!.uid),
                         );
 
-                        if (img != null) {
-                          imgs.add(img);
+                        if (uploadedImgs.isNotEmpty) {
+                          imgs.addAll(uploadedImgs);
 
                           _dialog.showToast('Ad image uploaded');
                         } else {

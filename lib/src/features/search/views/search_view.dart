@@ -77,7 +77,7 @@ class _SearchViewState extends ConsumerState<SearchView> {
                     horizontal: 20),
                 child: Column(
                   children: const [
-                    CircularProgressIndicator(),
+                    CircularProgressIndicator.adaptive(),
                     Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text('setting things up..'),

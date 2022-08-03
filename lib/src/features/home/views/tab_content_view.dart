@@ -28,11 +28,11 @@ class TabContentView extends StatelessWidget {
       pageSize: 20,
       builder: (context, snapshot, _) {
         if (snapshot.isFetching) {
-          return const Center(child: CircularProgressIndicator());
+          return const Center(child: CircularProgressIndicator.adaptive());
         }
 
         if (snapshot.isFetchingMore) {
-          return const Center(child: CircularProgressIndicator());
+          return const Center(child: CircularProgressIndicator.adaptive());
         }
 
         if (snapshot.hasError) {

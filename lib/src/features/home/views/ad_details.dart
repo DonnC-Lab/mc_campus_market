@@ -77,7 +77,8 @@ class AdDetailsView extends ConsumerWidget {
                                         );
                                       },
                                       loading: () =>
-                                          const CircularProgressIndicator(),
+                                          const CircularProgressIndicator
+                                              .adaptive(),
                                       error: (e, st) {
                                         debugLogger(e,
                                             error: e, stackTrace: st);
@@ -220,7 +221,8 @@ class AdDetailsView extends ConsumerWidget {
                       ),
                     );
             },
-            loading: () => const Center(child: CircularProgressIndicator()),
+            loading: () =>
+                const Center(child: CircularProgressIndicator.adaptive()),
             error: (e, st) {
               return const Center(child: Text('Failed to display Ad'));
             },
